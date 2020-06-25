@@ -79,7 +79,8 @@ button {
   font-weight: normal;
 }
 .carDescription {
-  margin: 0 auto 20px 20px;
+  margin: 0 20px 20px 20px;
   font-size: 1rem;
   color: #858585;
+  word-wrap: break-word;
 }
