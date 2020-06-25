@@ -3,9 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Notices</title>
   </head>
   <body>
-    Hello
+    <div class="container">
+      <h2 class="newNoticeTitle">New Notice</h2>
+      <input type="text" placeholder="Title" id="title" class="inputTitle" />
+      <textarea
+        placeholder="Description"
+        id="description"
+        class="inputDescription"
+        rows="10"
+      ></textarea>
+      <button onclick="newPost()">Save</button>
+      <h2 class="noticeTitle">Notice board</h2>
+      <div id="notices"></div>
+    </div>
+
+    <script src="js/scripts.js"></script>
   </body>
 </html>

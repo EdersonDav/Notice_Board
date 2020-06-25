@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdf8ff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  background-color: #fff;
+  min-height: 100vh;
+}
+.newNoticeTitle {
+  margin: 20px auto 40px 10px;
+}
+.inputTitle {
+  width: 50%;
+  margin: -20px auto 20px 16px;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 10px;
+  border: #8585854f solid 1px;
+  box-shadow: 0px 0px 8px -3px rgba(227, 227, 227, 1);
+  padding: 10px;
+}
+.inputTitle:focus {
+  outline: none;
+}
+.inputDescription {
+  width: 80%;
+  max-width: 80%;
+  margin: -5px auto 20px 16px;
+  font-size: 0.8rem;
+  padding: 5px;
+  border-radius: 10px;
+  height: 55px;
+  min-height: 55px;
+  border: #8585854f solid 1px;
+  box-shadow: 0px 0px 8px -3px rgba(227, 227, 227, 1);
+  resize: none;
+  padding: 10px;
+}
+.inputDescription {
+  outline: none;
+}
+button {
+  margin: -5px auto 20px 16px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: #8585854f solid 1px;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.noticeTitle {
+  margin: 0 auto 40px 10px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: -20px auto 40px auto;
+  border-radius: 10px;
+  padding: 10px;
+  border: #8585854f solid 1px;
+  -webkit-box-shadow: 0px 0px 18px -3px rgba(227, 227, 227, 1);
+  -moz-box-shadow: 0px 0px 18px -3px rgba(227, 227, 227, 1);
+  box-shadow: 0px 0px 18px -3px rgba(227, 227, 227, 1);
+}
+.carTitle {
+  margin: 10px auto 20px 10px;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.carDescription {
+  margin: 0 auto 20px 20px;
+  font-size: 1rem;
+  color: #858585;
+}

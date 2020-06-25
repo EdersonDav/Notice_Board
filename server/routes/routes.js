@@ -1,6 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const model = require("../model/notieces");
+const cors = require("cors");
+
+//Options to cors in my domain
+const options = {
+  origin: "http://localhost:5000",
+};
+
+router.use(cors(options));
 
 //List all notices
 router.get("/all", (req, res) => {
