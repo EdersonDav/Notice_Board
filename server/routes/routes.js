@@ -33,4 +33,16 @@ router.put("/update", (req, res) => {
   res.send("Notice successfully update");
 });
 
+//Get one notice for id in param
+router.get("/one/:id", (req, res) => {
+  let id = req.params.id;
+  let noticeSelect = "";
+  model.notices.forEach((notice) => {
+    if (notice.id == id) {
+      noticeSelect = notice;
+    }
+  });
+  res.json(noticeSelect);
+});
+
 module.exports = router;

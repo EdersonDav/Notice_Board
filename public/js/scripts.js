@@ -15,6 +15,7 @@ function loadingNotices() {
       let notices = resp;
       let allNotes = "";
       notices.forEach((notice) => {
+        //All HTML Notice
         let itemNotice = `
         <div class="card" id=${notice.id}>
           <div class="setings">
@@ -26,12 +27,43 @@ function loadingNotices() {
             <div id=${notice.id + "s"} class="containerSetings">
               <button onclick="deleteNotice('${notice.id}')" 
               class="btnSet">Delete</button>
-              <br />
-              <button class="btnSet">Update</button>
+              <button 
+              onclick="showOrHideEditNotice(
+                '${notice.id}','${notice.description}'
+                )" 
+              class="btnSet">Edit</button>
             </div>
           </div>
           <h5 class="carTitle">${notice.title}</h5>
           <p class="carDescription">${notice.description}</p>
+        </div>
+        <div id=${notice.id + "e"} class="hide editeNotice">
+          <input
+            type="text"
+            placeholder="New Title"
+            id="${notice.id + "title"}"
+            class="inputTitle"
+            maxlength="50"
+            value="${notice.title}"
+          />
+          <textarea
+            placeholder="New Description"
+            id="${notice.id + "description"}"
+            class="inputDescription"
+            rows="10"
+            value="${notice.description}"
+          ></textarea>
+          <br />
+          <button 
+          class="btnSaveCancel" 
+          onclick="showOrHideEditNotice(
+            '${notice.id}','${notice.description}'
+            )" >
+            Cancel
+          </button>
+          <button 
+          class="btnSaveCancel" 
+          onclick="editNotice('${notice.id}')">Edit</button>
         </div>
       `;
         allNotes += itemNotice;
@@ -75,6 +107,23 @@ function deleteNotice(id) {
   });
 }
 
+//Edit Notice
+function editNotice(id) {
+  let title = document.getElementById(id + "title").value;
+  let description = document.getElementById(id + "description").value;
+  let noticeEdit = { id, title, description };
+  const options = {
+    method: "PUT",
+    headers: new Headers({ "content-type": "application/json" }),
+    body: JSON.stringify(noticeEdit),
+  };
+  fetch("http://localhost:5000/api/update", options).then((resp) => {
+    console.log(resp);
+    showOrHideEditNotice(id, "");
+    loadingNotices();
+  });
+}
+
 //Show form create notice
 function showOrHideNewNotice() {
   if (btnNewNotice.classList.contains("hide")) {
@@ -88,10 +137,24 @@ function showOrHideNewNotice() {
   }
 }
 
+//Show form edit notice
+function showOrHideEditNotice(idNotice, txtDescription) {
+  let idEditeNotice = idNotice + "e";
+  let idDescriptionNotice = idNotice + "description";
+  let divEditNotice = document.getElementById(idEditeNotice);
+  let txtAreaEditNotice = document.getElementById(idDescriptionNotice);
+  if (divEditNotice.classList.contains("hide")) {
+    divEditNotice.classList.remove("hide");
+    divEditNotice.classList.add("show");
+    txtAreaEditNotice.value = txtDescription;
+  } else {
+    divEditNotice.classList.remove("show");
+    divEditNotice.classList.add("hide");
+  }
+}
+
 //Show Setings
 function setings(sId) {
-  console.log(sId);
-
   //div container setings
   let containerSetings = document.getElementById(sId);
 
