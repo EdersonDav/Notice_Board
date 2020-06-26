@@ -7,7 +7,7 @@ let btnNewNotice = document.getElementById("createNewNotice");
 
 //Get all Notices
 function loadingNotices() {
-  fetch("http://192.168.15.5:5000/api/all")
+  fetch("http://localhost:5000/api/all")
     .then((res) => {
       return res.json();
     })
@@ -51,7 +51,7 @@ function newPost() {
     body: JSON.stringify(notice),
   };
   if (title != "" && description != "") {
-    fetch("http://192.168.15.5:5000/api/new", options).then((resp) => {
+    fetch("http://localhost:5000/api/new", options).then((resp) => {
       console.log(resp);
       showOrHideNewNotice();
       loadingNotices();
@@ -69,7 +69,7 @@ function deleteNotice(id) {
     headers: new Headers({ "content-type": "application/json" }),
     body: JSON.stringify(noticeid),
   };
-  fetch("http://192.168.15.5:5000/api/delete", options).then((resp) => {
+  fetch("http://localhost:5000/api/delete", options).then((resp) => {
     console.log(resp);
     loadingNotices();
   });

@@ -5,7 +5,7 @@ const cors = require("cors");
 
 //Options to cors in my domain
 const options = {
-  origin: "http://192.168.15.5:5000",
+  origin: "http://localhost:5000",
 };
 
 router.use(cors(options));
