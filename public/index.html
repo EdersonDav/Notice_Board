@@ -8,21 +8,31 @@
   </head>
   <body>
     <div class="container">
-      <h2 class="newNoticeTitle">New Notice</h2>
-      <input
-        type="text"
-        placeholder="Title"
-        id="title"
-        class="inputTitle"
-        maxlength="50"
-      />
-      <textarea
-        placeholder="Description"
-        id="description"
-        class="inputDescription"
-        rows="10"
-      ></textarea>
-      <button onclick="newPost()">Save</button>
+      <button onclick="showOrHideNewNotice()" class="btnNewNoticeTitle">
+        New Notice
+      </button>
+
+      <div class="hide" id="createNewNotice">
+        <input
+          type="text"
+          placeholder="Title"
+          id="title"
+          class="inputTitle"
+          maxlength="50"
+        />
+        <textarea
+          placeholder="Description"
+          id="description"
+          class="inputDescription"
+          rows="10"
+        ></textarea>
+        <br />
+        <button class="btnSaveCancel" onclick="showOrHideNewNotice()">
+          Cancel
+        </button>
+        <button class="btnSaveCancel" onclick="newPost()">Save</button>
+      </div>
+
       <h2 class="noticeTitle">Notice board</h2>
       <div id="notices"></div>
     </div>

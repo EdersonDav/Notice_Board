@@ -7,6 +7,14 @@ body {
   padding: 0;
   background-color: #fdf8ff;
 }
+button {
+  border-radius: 10px;
+  border: #8585854f solid 1px;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -15,8 +23,17 @@ body {
   background-color: #fff;
   min-height: 100vh;
 }
-.newNoticeTitle {
+.btnNewNoticeTitle {
   margin: 20px auto 40px 10px;
+  font-size: 1rem;
+}
+.hide {
+  height: 0;
+  display: none;
+}
+.show {
+  height: auto;
+  transition: 2s;
 }
 .inputTitle {
   width: 50%;
@@ -48,20 +65,15 @@ body {
 .inputDescription {
   outline: none;
 }
-button {
+.btnSaveCancel {
   margin: -5px auto 20px 16px;
   font-size: 1rem;
-  border-radius: 10px;
-  border: #8585854f solid 1px;
-  padding: 10px;
-  background-color: #fff;
-  cursor: pointer;
-  outline: none;
 }
 .noticeTitle {
   margin: 0 auto 40px 10px;
 }
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -83,4 +95,57 @@ button {
   font-size: 1rem;
   color: #858585;
   word-wrap: break-word;
+}
+.setings {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.dotdotdot {
+  position: absolute;
+  right: 0;
+  padding-top: 4px;
+}
+@keyframes moveDown {
+  0% {
+    margin-top: -30px;
+  }
+  80% {
+    margin-top: 38px;
+  }
+  100% {
+    margin-top: 31px;
+    visibility: initial;
+  }
+}
+@keyframes moveUp {
+  0% {
+    margin-top: 31px;
+  }
+  10% {
+    margin-top: 38px;
+  }
+  80% {
+    visibility: hidden;
+  }
+  100% {
+    margin-top: -30px;
+    visibility: hidden;
+  }
+}
+.containerSetings {
+  visibility: hidden;
+  margin-top: 0;
+  margin-right: -9px;
+}
+.containerSetingsAnimateDown {
+  animation: moveDown 1s forwards;
+}
+.containerSetingsAnimateUp {
+  animation: moveUp 0.5s forwards;
+}
+.btnSet {
+  padding: 8px;
+  margin-top: 2px;
+  margin-right: 4px;
 }
