@@ -2,7 +2,7 @@
 
 ## Your notice board!!! 📢 ⚠️
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/EdersonDav/Notice_Board) [![Author](https://img.shields.io/badge/author-EdersonDav-000000?style=logo=node)](https://github.com/EdersonDav/Notice_Board) [![Stars](https://img.shields.io/github/stars/EdersonDav/Notice_Board?color=000000&style=flat-square)](https://github.com/EdersonDav/Notice_Board)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/EdersonDav/Notice_Board) [![Author](https://img.shields.io/badge/author-EdersonDav-000000?style=logo=node)](https://github.com/EdersonDav/Notice_Board) 
 
 <img src=".github/gif.gif">
 
@@ -63,15 +63,8 @@
   <img src=".github/css.png" title="CSS" alt="Icon CSS" width="60"> 
 </figure>
 
-<style>
-figure {
-  text-align: start;
-  font-size: smaller;
-  display:flex;
-  align-items: center;
-  padding:5px
-}
-</style>
+
+
 
 # ☕ Credits
 
