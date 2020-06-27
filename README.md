@@ -9,10 +9,10 @@
 # :pushpin: Table of Contents
 
 - [Features](#rocket-features)
-- [Installation](#installation)
-- [Getting Started](#getting-started)
-- [Technology Used](#technology-used)
-- [Credits](#credits)
+- [Installation](#-installation)
+- [Getting Started](#-getting-started)
+- [Technology Used](#-technology-used)
+- [Credits](#-credits)
 
 # :rocket: Features
 
