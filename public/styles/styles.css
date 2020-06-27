@@ -1,11 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 * {
   font-family: "Ubuntu", sans-serif;
 }
 body {
   margin: 0;
   padding: 0;
-  background-color: #fdf8ff;
+  /* background-color: #3be2ff; */
+  background: rgb(175, 248, 255);
+  background: linear-gradient(
+    167deg,
+    rgba(175, 248, 255, 0.9808298319327731) 0%,
+    rgba(140, 240, 255, 1) 23%,
+    rgba(103, 235, 255, 1) 46%,
+    rgba(77, 231, 255, 1) 61%,
+    rgba(87, 229, 255, 1) 83%,
+    rgba(0, 213, 255, 1) 100%
+  );
+  --colorBgNotice: rgba(255, 255, 255, 0.767);
+  --shadowColor: #1a373d80;
 }
 button {
   border-radius: 10px;
@@ -18,10 +31,16 @@ button {
 .container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  background-color: #fff;
+  background-color: var(--colorBgNotice);
   min-height: 100vh;
+  overflow-y: scroll;
+  max-height: 100vh;
+  box-shadow: -1px 2px 49px 23px rgba(255, 255, 255, 0.575);
+}
+.container::-webkit-scrollbar {
+  width: 2px;
 }
 .btnNewNoticeTitle {
   margin: 20px auto 40px 10px;
@@ -42,7 +61,7 @@ button {
   padding: 5px;
   border-radius: 10px;
   border: #8585854f solid 1px;
-  box-shadow: 0px 0px 8px -3px rgba(227, 227, 227, 1);
+  box-shadow: 0px 0px 8px -3px var(--shadowColor);
   padding: 10px;
 }
 .inputTitle:focus {
@@ -58,7 +77,7 @@ button {
   height: 55px;
   min-height: 55px;
   border: #8585854f solid 1px;
-  box-shadow: 0px 0px 8px -3px rgba(227, 227, 227, 1);
+  box-shadow: 0px 0px 8px -3px var(--shadowColor);
   resize: none;
   padding: 10px;
 }
@@ -70,6 +89,9 @@ button {
   font-size: 1rem;
 }
 .noticeTitle {
+  color: #161616;
+  font-family: "Varela Round", sans-serif;
+  font-size: 2rem;
   margin: 0 auto 40px 10px;
 }
 .card {
@@ -81,9 +103,10 @@ button {
   border-radius: 10px;
   padding: 10px;
   border: #8585854f solid 1px;
-  -webkit-box-shadow: 0px 0px 18px -3px rgba(227, 227, 227, 1);
-  -moz-box-shadow: 0px 0px 18px -3px rgba(227, 227, 227, 1);
-  box-shadow: 0px 0px 18px -3px rgba(227, 227, 227, 1);
+  -webkit-box-shadow: 0px 0px 18px -3px var(--shadowColor);
+  -moz-box-shadow: 0px 0px 18px -3px var(--shadowColor);
+  box-shadow: 0px 0px 18px -3px var(--shadowColor);
+  background-color: #fff;
 }
 .carTitle {
   margin: 10px auto 20px 10px;
@@ -93,7 +116,7 @@ button {
 .carDescription {
   margin: 0 20px 20px 20px;
   font-size: 1rem;
-  color: #858585;
+  color: #3d3d3d;
   word-wrap: break-word;
 }
 .setings {

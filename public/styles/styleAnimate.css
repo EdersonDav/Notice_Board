@@ -1,0 +1,55 @@
+@keyframes downIcon {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 97vh;
+    bottom: 0;
+  }
+}
+.pos {
+  z-index: -1;
+  top: -20px;
+  width: 1px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  border: solid 1px rgb(255, 255, 255);
+  border-radius: 45%;
+  box-shadow: -1px 2px 49px 23px rgba(255, 255, 255, 0.473);
+}
+.animate0 {
+  animation: downIcon 4s linear 0s infinite alternate;
+}
+.animate1 {
+  animation: downIcon 4s linear 0.5s infinite alternate;
+}
+.animate2 {
+  animation: downIcon 4s linear 1s infinite alternate;
+}
+.animate3 {
+  animation: downIcon 4s linear 1.6s infinite alternate;
+}
+.animate4 {
+  animation: downIcon 4s linear 2s infinite alternate;
+}
+.animate5 {
+  animation: downIcon 4s linear 2.2s infinite alternate;
+}
+
+.animate6 {
+  animation: downIcon 4s linear 2.8s infinite alternate;
+}
+
+.animate7 {
+  animation: downIcon 4s linear 3s infinite alternate;
+}
+.animate8 {
+  animation: downIcon 4s linear 3.6s infinite alternate;
+}
+.animate9 {
+  animation: downIcon 4s linear 4s infinite alternate;
+}
+.animate10 {
+  animation: downIcon 4s linear 5s infinite alternate;
+}

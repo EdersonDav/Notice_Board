@@ -2,8 +2,8 @@ module.exports = {
   notices: [
     {
       id: generateId(),
-      title: "First Notice test",
-      description: "First description test",
+      title: "",
+      description: "",
     },
   ],
 

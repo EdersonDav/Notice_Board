@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   loadingNotices();
+  generateDivsAnimates();
+  showOrHideNewNotice();
 });
-
-//div form create new Notice
-let btnNewNotice = document.getElementById("createNewNotice");
 
 //Get all Notices
 function loadingNotices() {
@@ -15,8 +14,9 @@ function loadingNotices() {
       let notices = resp;
       let allNotes = "";
       notices.forEach((notice) => {
-        //All HTML Notice
-        let itemNotice = `
+        if (notice.title != "") {
+          //All HTML Notice
+          let itemNotice = `
         <div class="card" id=${notice.id}>
           <div class="setings">
             <button 
@@ -66,7 +66,8 @@ function loadingNotices() {
           onclick="editNotice('${notice.id}')">Edit</button>
         </div>
       `;
-        allNotes += itemNotice;
+          allNotes += itemNotice;
+        }
       });
       document.getElementById("notices").innerHTML = allNotes;
     });
@@ -126,12 +127,15 @@ function editNotice(id) {
 
 //Show form create notice
 function showOrHideNewNotice() {
-  if (btnNewNotice.classList.contains("hide")) {
-    btnNewNotice.classList.remove("hide");
-    btnNewNotice.classList.add("show");
+  //div form create new Notice
+  let divNewNotice = document.getElementById("createNewNotice");
+
+  if (divNewNotice.classList.contains("hide")) {
+    divNewNotice.classList.remove("hide");
+    divNewNotice.classList.add("show");
   } else {
-    btnNewNotice.classList.remove("show");
-    btnNewNotice.classList.add("hide");
+    divNewNotice.classList.remove("show");
+    divNewNotice.classList.add("hide");
     document.querySelector("#title").value = "";
     document.querySelector("#description").value = "";
   }
@@ -165,5 +169,19 @@ function setings(sId) {
   } else {
     containerSetings.classList.add("containerSetingsAnimateUp");
     containerSetings.classList.remove("containerSetingsAnimateDown");
+  }
+}
+
+//Animate
+function generateDivsAnimates() {
+  let body = document.querySelector("body");
+  let numbersDivs = 1;
+
+  while (numbersDivs < 100) {
+    let ramdom = Math.floor(Math.random() * 10);
+    body.innerHTML += `
+    <div style="left: ${numbersDivs}%;" class="pos animate${ramdom}"></div>
+    `;
+    numbersDivs += 5;
   }
 }
