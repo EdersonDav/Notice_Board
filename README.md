@@ -41,7 +41,7 @@
 
 `npm run dev`
 
-**In your browswe open**
+**In your browser open**
 
 `http://localhost:5000`
 
@@ -70,6 +70,6 @@
 
 ## <i>Ederson Davi</i>
 
-## [Github](https://github.com/EdersonDav) 👨🏿‍🎓🚀
+[Github](https://github.com/EdersonDav) 👨🏿‍🎓🚀
 
-## [LinkedIn](www.linkedin.com/in/ederson-silva-79b46110b) 👨🏿‍👔
+[LinkedIn](www.linkedin.com/in/ederson-silva-79b46110b) 👨🏿‍👔
