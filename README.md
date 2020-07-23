@@ -72,4 +72,4 @@
 
 [Github](https://github.com/EdersonDav) 👨🏿‍🎓🚀
 
-[LinkedIn](www.linkedin.com/in/ederson-silva-79b46110b) 👨🏿‍👔
+[LinkedIn](www.linkedin.com/in/silvaedersonqueiroz) 👨🏿‍👔
